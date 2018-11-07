@@ -12,6 +12,14 @@
     uid: "{{ omero_server_system_uid | default(omit) }}"
   when: omero_server_system_user_manage
 
+- name: omero server | add groups to system user
+  become: yes
+  user:
+    name: "{{ omero_server_system_user }}"
+    groups: "{{ omero_server_system_user_additional_groups }}"
+    append: yes
+  when: omero_server_system_user_manage
+
 # TODO: Ideally everything should be read-only apart from the var directory
 - name: omero server | create omero directories
   become: yes

@@ -20,6 +20,8 @@ omero_server_config_set: {}
 
 # OMERO system user
 omero_server_system_user: omero-server
+# Pre-existing groups that the omero-server user should be added to
+omero_server_system_user_additional_groups: []
 omero_server_system_user_manage: True
 
 # OMERO system user ID (If not defined one is chosen automatically)
