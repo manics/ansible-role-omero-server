@@ -1,6 +1,20 @@
 ---
 # tasks for omero-server
 
+- name: Install ice
+  include_role:
+    name: ome.ice
+  vars:
+    ice_version: "{{ omero_server_ice_version }}"
+    ice_install_devel: "{{ not omero_server_python3 }}"
+    ice_install_python: "{{ not omero_server_python3 }}"
+
+- name: Install postgresql clients
+  include_role:
+    name: ome.postgresql
+  vars:
+    postgresql_install_server: false
+
 - include: omero-user.yml
 
 - include: omero-datadir.yml
