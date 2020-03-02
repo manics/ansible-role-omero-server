@@ -4,8 +4,11 @@
 - src: ome.basedeps
 - src: ome.java
 - src: ome.omero_python_deps
+- name: ome.python3_virtualenv
+  src: >-
+    https://github.com/manics/ansible-role-python3-virtualenv/archive/11af8c8993c8f7e783d01deed9cbbf4095e9efb5.tar.gz
 - src: ome.ice
 # https://github.com/ome/ansible-role-postgresql/pull/19
 - name: ome.postgresql
   src: >-
-    https://github.com/ome/ansible-role-postgresql/archive/8ac895573cbcbbc52b3c397b62b1f1092dcba0cc.tar.gz
+    https://github.com/ome/ansible-role-postgresql/archive/88ad4301eee0f5285d5387b508c892ff921f754e.tar.gz
