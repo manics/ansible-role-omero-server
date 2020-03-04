@@ -6,7 +6,8 @@ services:
   - docker
 
 install:
-  - pip install "ome-ansible-molecule<0.5"
+  - pip install
+    https://github.com/ome/ome-ansible-molecule/archive/974501d8bff25c396289d7a42ebf7ac16dea3a55.zip
 
 script:
   - molecule test -s $SCENARIO
